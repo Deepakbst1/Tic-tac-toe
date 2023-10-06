@@ -4,7 +4,7 @@ import GameOver from "./GameOver";
 import GameState from "./GameState";
 import Reset from "./Reset";
 
-const PLAYER_X = "X" ;
+const PLAYER_X = "X";
 const PLAYER_O = "O";
 
 const winningCombinations = [
@@ -60,23 +60,13 @@ function TicTacToe() {
     if (gameState !== GameState.inProgress) {
       return;
     }
-  
+
     if (tiles[index] !== null) {
       return;
     }
-  
+
     const newTiles = [...tiles];
     newTiles[index] = playerTurn;
-  
-    // Add inline CSS for 'X' and 'O'
-    const tileStyle = {
-      color: playerTurn === PLAYER_X ? 'red' : 'blue',
-    };
-  
-    newTiles[index] = (
-      <span style={tileStyle}>{playerTurn === PLAYER_X ? 'X' : 'O'}</span>
-    );
-  
     setTiles(newTiles);
     if (playerTurn === PLAYER_X) {
       setPlayerTurn(PLAYER_O);
