@@ -4,10 +4,13 @@ body {
   align-items: center;
   background-color: #242730;
   color: rgb(254, 254, 254);
+
+  
 }
 
 h1 {
   text-align: center;
+  color: violet;
 }
 
 .board {
@@ -16,6 +19,7 @@ h1 {
   grid-template-rows: 50px 50px 50px;
   cursor: pointer;
   position: relative;
+  
 }
 
 .tile {
@@ -25,18 +29,25 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.tile-x{
+  color: red;
+}
 
 .right-border {
-  border-right: 0.2em solid #fa0e0e;
+  border-right: 0.2em solid #080707;
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #f20909;
+  border-bottom: 0.2em solid #060606;
 }
 
 .o-hover:hover::after {
   content: "O";
-  opacity: 0.4;
+  color: blue;
+}
+.x-hover:hover::after {
+  content: "X";
+  color: rgb(223, 14, 6);
 }
 
 .strike {
